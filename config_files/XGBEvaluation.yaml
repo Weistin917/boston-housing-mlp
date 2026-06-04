@@ -1,0 +1,32 @@
+# Model configuration
+model:
+  name: "xgb"
+  params:
+    n_estimators: [100, 1000, 50]        # [start, finish, step] for np.arange
+    learning_rate: [0.01, 0.05, 0.1, 0.2]
+    max_depth: [3, 4, 5, 6, 8]
+    subsample: [0.6, 0.7, 0.8, 0.9, 1.0]
+    colsample_bytree: [0.6, 0.7, 0.8, 0.9, 1.0]
+    n_iter: 30
+
+# Preprocessing configuration
+preprocess:
+  missing_values:         # mean    | dropout
+  encoding:               # one_hot | ordinal
+  normalization: z_norm   # z_norm  | minmax 
+
+# Dataset split configuration
+split:
+  split_seed: 49
+  test_size: 0.2
+  fold_n: 5    # for K-fold Cross Validation
+
+# Evaluation configuration
+eval:
+  metrics:
+    - "neg_root_mean_squared_error"
+    - "neg_mean_absolute_error"
+    - "r2"
+
+test: true
+log_dir:  "evaluation/Results"

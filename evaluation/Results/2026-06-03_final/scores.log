@@ -1,0 +1,53 @@
+Logging console output to: evaluation/Results/2026-06-03/scores.log
+--- Preprocessing data ---
+Normalizing columns ['CRIM', 'ZN', 'AGE', 'DIS', 'RAD', 'TAX', 'LSTAT'] with z_norm.
+---------------------------
+--- Data Split ---
+Splitting dataset with test size = 0.2, random state = 49.
+Creating K-Fold with 5 folds.
+------------------
+--- Model ---
+Building model mlp with parameters:
+{'in_channels': 12, 'out_channels': 1, 'features': [32, 64, 128, 256], 'activation': 'relu', 'last_activation': 'relu'}
+-------------
+
+--- MLP Results ---
+--> loss = 14.124458312988281
+--> RootMeanSquaredError = 3.7582521438598633
+--> mae = 2.568155527114868
+--> R2Score = 0.8549174666404724
+---------------------------------------------->
+
+--- Model ---
+Building model svr with parameters:
+{'kernel': 'rbf', 'C': [0.1, 1, 10, 100], 'gamma': ['scale', 0.1, 0.01, 0.001], 'epsilon': [0.001, 0.1, 1, 2]}
+-------------
+
+--- SVR Results ---
+--> neg_root_mean_squared_error = 3.8370622166734334
+--> neg_mean_absolute_error = 2.332371406969537
+--> r2 = 0.8487690031725177
+---------------------------------------------->
+
+--- Model ---
+Building model random_forest with parameters:
+{'n_estimators': [100, 200, 500], 'max_depth': ['None', 10, 20, 30], 'min_samples_split': [2, 5, 10], 'max_features': ['sqrt', 'log2', 'None']}
+-------------
+
+--- Random Forest Results ---
+--> neg_root_mean_squared_error = 3.3381049117666737
+--> neg_mean_absolute_error = 2.3712843137254906
+--> r2 = 0.8855428056485806
+---------------------------------------------->
+
+--- Model ---
+Building model xgb with parameters:
+{'n_estimators': [100, 1000, 50], 'learning_rate': [0.01, 0.05, 0.1, 0.2], 'max_depth': [3, 4, 5, 6, 8], 'subsample': [0.6, 0.7, 0.8, 0.9, 1.0], 'colsample_bytree': [0.6, 0.7, 0.8, 0.9, 1.0], 'n_iter': 30}
+-------------
+
+--- XGBoost Results ---
+--> neg_root_mean_squared_error = 3.1842836831696606
+--> neg_mean_absolute_error = 2.31227783128327
+--> r2 = 0.8958482347099402
+---------------------------------------------->
+

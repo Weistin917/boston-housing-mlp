@@ -1,0 +1,21 @@
+Logging console output to: evaluation/Results/2026-05-31_2/scores.log
+--- Preprocessing data ---
+Normalizing columns ['CRIM', 'ZN', 'AGE', 'DIS', 'RAD', 'TAX', 'LSTAT'] with z_norm.
+---------------------------
+--- Data Split ---
+Splitting dataset with test size = 0.2, random state = 49.
+Creating K-Fold with 5 folds.
+------------------
+--- Model ---
+Building model random_forest with parameters:
+{'n_estimators': [100, 200, 500], 'max_depth': ['None', 10, 20, 30], 'min_samples_split': [2, 5, 10], 'max_features': ['sqrt', 'log2', 'None']}
+-------------
+
+--- Evaluation of model (2026-05-31_2) ---
+kfold_classical_model-random_forest
+Final scores of evaluation:
+--> neg_root_mean_squared_error = 3.3381049117666737
+--> neg_mean_absolute_error = 2.3712843137254906
+--> r2 = 0.8855428056485806
+---------------------------------------------->
+

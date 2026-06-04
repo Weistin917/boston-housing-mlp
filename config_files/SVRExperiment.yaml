@@ -1,0 +1,30 @@
+# Model configuration
+model:
+  name: "svr"
+  params:
+    kernel: "rbf"   # rbf | poly
+    C: [0.1, 1, 10, 100]
+    gamma: ['scale', 0.1, 0.01, 0.001]
+    epsilon: [0.001, 0.1, 1, 2]
+
+# Preprocessing configuration
+preprocess:
+  missing_values:         # mean    | dropout
+  encoding:               # one_hot | ordinal
+  normalization: z_norm   # z_norm  | minmax 
+
+# Dataset split configuration
+split:
+  split_seed: 49
+  test_size: 0.2
+  fold_n: 5    # for K-fold Cross Validation
+
+# Evaluation configuration
+eval:
+  metrics:
+    - "neg_root_mean_squared_error"
+    - "neg_mean_absolute_error"
+    - "r2"
+
+log_dir:  "runs/Experiments"
+ckpt_dir: "checkpoints/Experiments"

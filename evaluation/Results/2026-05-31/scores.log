@@ -1,0 +1,22 @@
+Logging console output to: evaluation/Results/2026-05-31/scores.log
+--- Preprocessing data ---
+Normalizing columns ['CRIM', 'ZN', 'AGE', 'DIS', 'RAD', 'TAX', 'LSTAT'] with z_norm.
+---------------------------
+--- Data Split ---
+Splitting dataset with test size = 0.2, random state = 49.
+Creating K-Fold with 5 folds.
+------------------
+--- Model ---
+Building model svr with parameters:
+{'kernel': 'rbf', 'C': [0.1, 1, 10, 100], 'gamma': ['scale', 0.1, 0.01, 0.001], 'epsilon': [0.001, 0.1, 1, 2]}
+-------------
+
+
+--- Evaluation of model (2026-05-31) ---
+kfold_model-svr_kernel-rbf
+Final scores of evaluation:
+--> neg_mean_squared_error = 14.72304645462284
+--> neg_mean_absolute_error = 2.332371406969537
+--> r2 = 0.8487690031725177
+---------------------------------------------->
+

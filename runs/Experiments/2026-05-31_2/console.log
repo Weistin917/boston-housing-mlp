@@ -1,0 +1,20 @@
+Logging console output to: runs/Experiments/2026-05-31_2/console.log
+--- Preprocessing data ---
+Normalizing columns ['CRIM', 'ZN', 'AGE', 'DIS', 'RAD', 'TAX', 'LSTAT'] with z_norm.
+---------------------------
+--- Data Split ---
+Splitting dataset with test size = 0.2, random state = 49.
+Creating K-Fold with 5 folds.
+------------------
+--- Model ---
+Building model random_forest with parameters:
+{'n_estimators': [100, 200, 500], 'max_depth': ['None', 10, 20, 30], 'min_samples_split': [2, 5, 10], 'max_features': ['sqrt', 'log2', 'None']}
+-------------
+
+--- K-Fold Cross Validation with model (2026-05-31_2) ---
+kfold_classical_model-random_forest
+Best Params: {'max_depth': None, 'max_features': None, 'min_samples_split': 2, 'n_estimators': 100}
+Best results:
+Best neg_root_mean_squared_error: -3.3915
+Best neg_mean_absolute_error: -2.2537
+Best r2: 0.8552

@@ -1,0 +1,32 @@
+# Model configuration
+model:
+  name: "mlp"
+  params:
+    in_channels: 12
+    out_channels: 1
+    features: [32, 64, 128, 256]     # hidden layers' units
+    activation: "relu"
+    last_activation: "relu"
+
+# Preprocessing configuration
+preprocess:
+  missing_values:         # mean    | dropout
+  encoding:               # one_hot | ordinal
+  normalization: z_norm   # z_norm  | minmax 
+
+# Dataset split configuration
+split:
+  split_seed: 49
+  test_size: 0.2
+  fold_n: 5    # for K-fold Cross Validation
+
+# Evaluation configuration
+eval:
+  loss: "mse"
+  metrics:
+    - "RootMeanSquaredError"
+    - "mae"
+    - "R2Score"
+
+test: true
+log_dir:  "evaluation/Results"

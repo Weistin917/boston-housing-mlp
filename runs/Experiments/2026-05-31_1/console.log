@@ -1,0 +1,20 @@
+Logging console output to: runs/Experiments/2026-05-31_1/console.log
+--- Preprocessing data ---
+Normalizing columns ['CRIM', 'ZN', 'AGE', 'DIS', 'RAD', 'TAX', 'LSTAT'] with z_norm.
+---------------------------
+--- Data Split ---
+Splitting dataset with test size = 0.2, random state = 49.
+Creating K-Fold with 5 folds.
+------------------
+--- Model ---
+Building model svr with parameters:
+{'kernel': 'rbf', 'C': [0.1, 1, 10, 100], 'gamma': ['scale', 0.1, 0.01, 0.001], 'epsilon': [0.001, 0.1, 1, 2]}
+-------------
+
+--- K-Fold Cross Validation with model (2026-05-31_1) ---
+kfold_model-svr_kernel-rbf
+Best Params: {'svr__C': 100, 'svr__epsilon': 1, 'svr__gamma': 'scale'}
+Best results:
+Best neg_root_mean_squared_error: -3.4850
+Best neg_mean_absolute_error: -2.2625
+Best r2: 0.8395

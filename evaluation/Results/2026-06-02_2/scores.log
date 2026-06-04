@@ -1,0 +1,22 @@
+Logging console output to: evaluation/Results/2026-06-02_2/scores.log
+--- Preprocessing data ---
+Normalizing columns ['CRIM', 'ZN', 'AGE', 'DIS', 'RAD', 'TAX', 'LSTAT'] with z_norm.
+---------------------------
+--- Data Split ---
+Splitting dataset with test size = 0.2, random state = 49.
+Creating K-Fold with 5 folds.
+------------------
+--- Model ---
+Building model mlp with parameters:
+{'in_channels': 12, 'out_channels': 1, 'features': [32, 64, 128, 256], 'activation': 'relu', 'last_activation': 'relu'}
+-------------
+
+--- Evaluation of model (2026-06-02_2) ---
+chosen_model-mlp_opt-adam_lr-1.972e-03_batchsize-32
+Final scores of evaluation:
+--> loss = 14.967519760131836
+--> RootMeanSquaredError = 3.8687877655029297
+--> mae = 2.59281325340271
+--> R2Score = 0.8462578058242798
+---------------------------------------------->
+
