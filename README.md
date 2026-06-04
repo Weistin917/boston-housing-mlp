@@ -9,6 +9,11 @@ Final project for the Artificial Intelligence course — Bachelor's Degree in Sy
 
 ---
 
+## Scientific Poster
+The oficial investigation poster for this project can be found [here](./Poster.pdf).
+
+---
+
 ## Objective
 
 Predict the median house value (`MEDV`) in Boston neighborhoods using the classic Boston Housing dataset. Four regression models are trained, evaluated, and compared.
